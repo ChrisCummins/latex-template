@@ -1,0 +1,59 @@
+                       latex-template
+                       ==============
+
+This directory contains latex-template, a set of boilerplate and build
+scripts for quickly creating and managing a LaTeX document. To get
+started, install the dependencies (see full list below) and simply
+run:
+
+    ./autogen.sh && ./configure && make
+
+You can then see a full list of available commands by executing `make
+help'.
+
+
+FEATURES
+========
+
+ - Automatic ordering and invocation of build tools, including BibTex.
+
+ - Predefined directory structure for separating data, text, and
+   graphics assets.
+
+ - Support for generating local copies of global bibliography file,
+   such as those managed by Mendeley and other document
+   organisers. The local bibliography will include only the items
+   referenced in the text.
+
+
+DEPENDENCIES
+============
+These programs are required for a minimal document build.
+
+ - autoconf >= 2.65
+ - automake >= 1.11
+ - pdflatex
+
+
+OPTIONAL DEPENDENCIES
+=====================
+These purely optional programs enable extra features, such as
+automatic word counting and citation checking.
+
+ - bibtex
+ - bibtool
+ - emacsclient
+ - texcount
+ - textlint
+ - xdg-open
+
+
+LICENSE
+=======
+Released under the terms of the MIT License. See the LICENSE file in
+this directory for further information.
+
+
+AUTHORS
+=======
+Chris Cummins <chrisc.101@gmail.com>

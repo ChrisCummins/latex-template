@@ -1,0 +1,146 @@
+#
+#                Git ignore file
+#
+# Copyright (c) 2013, 2014, 2015 Chris Cummins.
+# Copyright (c) 2014 GitHub, Inc.
+#
+# Permission is hereby granted, free of charge, to any person
+# obtaining a copy of this software and associated documentation files
+# (the "Software"), to deal in the Software without restriction,
+# including without limitation the rights to use, copy, modify, merge,
+# publish, distribute, sublicense, and/or sell copies of the Software,
+# and to permit persons to whom the Software is furnished to do so,
+# subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be
+# included in all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+# EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS
+# BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN
+# ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+# CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+
+#
+# Autotools by-products
+#
+.deps/
+/aclocal.m4
+/autom4te.cache
+/build
+/compile
+/config.h
+/config.h.in
+/config.log
+/config.status
+/configure
+/configure.scan
+/depcomp
+/install-sh
+/libtool
+/missing
+/stamp-h1
+Makefile
+Makefile.in
+
+
+#
+# LaTeX compilation byproducts
+#
+*-blx.bib
+*.acn
+*.acr
+*.alg
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.glg
+*.glo
+*.gls
+*.idx
+*.ilg
+*.ind
+*.ist
+*.lof
+*.log
+*.lol
+*.lot
+*.maf
+*.mtc
+*.mtc0
+*.nav
+*.nlo
+*.out
+*.pdfsync
+*.ps
+*.run.xml
+*.snm
+*.synctex.gz
+*.tdo
+*.toc
+*.vrb
+*.xdy
+
+
+#
+# Editor backups and transient files
+#
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+.*.s[a-w][a-z]
+*.un~
+Session.vim
+.netrwhist
+
+
+#
+# Patches, diffs and VCS integration
+#
+*.diff
+*.orig
+*.patch
+*.rej
+*/.cvsignore
+*/CVS/*
+.cvsignore
+/CVS/*
+
+
+#
+# Platform specific noise
+#
+$RECYCLE.BIN/
+.AppleDouble
+.DS_Store
+.LSOverride
+.Spotlight-V100
+.Trashes
+Desktop.ini
+ehthumbs.db
+Icon
+Thumbs.db
+
+#
+# Auxilliary Makefiles
+#
+!/fig/Makefile
+!/sec/Makefile
+
+#
+# The compiled document
+#
+/report.pdf
