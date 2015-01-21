@@ -1,9 +1,34 @@
-% An empty LaTeX document.
+%%%%%%%%%%%%%%%%%%%%%%
+%% Document details %%
+%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass{article}
-\title{Latex Template}
+% Author
 \author{Chris Cummins}
-\begin{document}
-\maketitle
-Hello, \LaTeX!
-\end{document}
+
+% Date (Month Year)
+\date{January 1970}
+
+% Paper title
+\title{My First Paper}
+
+\input{preamble}
+
+%%%%%%%%%%
+%% Body %%
+%%%%%%%%%%
+\section{Introduction}\label{sec:introduction}
+\input{sec/introduction}
+
+\section{Background}\label{sec:background}
+\input{sec/background}
+
+\section{Methodology}\label{sec:methodology}
+\input{sec/methodology}
+
+\section{Evaluation}\label{sec:evaluation}
+\input{sec/evaluation}
+
+\section{Conclusion}\label{sec:conclusions}
+\input{sec/conclusions}
+
+\input{postamble}
