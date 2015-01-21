@@ -137,6 +137,7 @@ Thumbs.db
 #
 # Auxilliary Makefiles
 #
+!/dat/Makefile
 !/fig/Makefile
 !/sec/Makefile
 
