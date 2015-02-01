@@ -270,6 +270,13 @@ define bibtool
 	 $(BIBTOOL) -v -x $1 -o $2 &>>$(DocumentBuildLog) || $(BIBTOOL) -v -x $1 -o $2)
 endef
 
+# Invoke cleanbib script on a .bib file.
+#   $1 Path to bib file
+define cleanbib
+       (echo -e "\nCOMMAND: $(CLEANBIB) $1\n" >>$(DocumentBuildLog); \
+        $(CLEANBIB) $1 &>>$(DocumentBuildLog) || $(CLEANBIB) $1)
+endef
+
 # The LaTeX build target. This gnarly bit of shell hackery uses nested
 # conditionals and sub-shells to invoke pdflatex, bibtex, bibtool, and
 # cleanbib the correct number of times depending on the document
@@ -295,6 +302,7 @@ if HAVE_BIBTOOL
 			$(EGREP) '\\bibdata.*$(BIBLIBRARY)' $*.aux >/dev/null 2>&1 && { \
 				if ! $(AM_V_P); then echo '  BIBTOOL  $(DocumentBibfile)'; fi; \
 				$(call bibtool,$*.aux,$(DocumentBibfile)); \
+				$(call cleanbib,$(DocumentBibfile));	\
 			} || true;					\
 			if ! $(AM_V_P); then echo '  LATEX    $@'; fi;	\
 			$(call pdflatex, $<);				\
